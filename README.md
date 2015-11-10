@@ -54,3 +54,15 @@ un consumo energético menor.
 | 12        | Registro de identificación C  | Lect        |
 
 ## Salidas del magnetómetro.
+
+La salida del magnetómetro depende de dos registros, concretamente, del registro
+de configuración A y del registro de configuración B.
+
+El registro de configuración A permite configurar si deseamos hacer una media sobre
+las lecturas, por defecto se toma una única lectura.
+
+También permite indicar con qué frecuencia se actualizan los registros de salida.
+Por defecto, se actualizan con una frecuencia de 15 Hz.
+
+Por último se puede configurar la posibilidad de añadir un cierto sesgo a las
+lecturas, pero esta característica viene deshabilitada por defecto.
