@@ -72,9 +72,7 @@ tres bits más significativos controlan este parámetro. Los valores posibles so
 
 |   GN2  |  GN1  |  GN0  | Rango de lectura recomendado | Ganancia LSB/Gauss  |  Resolución digital mG/LSB | Rango de salida |
 |--------|-------|-------|------------------------------|---------------------|----------------------------|-----------------|
-
 |  0     |    0  |   0   | +- 0.88 Ga                   | 1370                | 0.73                       | -2048 - 2047    |
-
 |  0     |    0  |   1   | +- 1.33 Ga                   | 1090 (Val por def)  | 0.92                       | -2048 - 2047    |
 
 
