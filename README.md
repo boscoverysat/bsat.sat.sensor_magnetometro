@@ -71,7 +71,7 @@ En el registro de configuración B se controla la resolución de las lecturas. L
 tres bits más significativos controlan este parámetro. Los valores posibles son:
 
 |   GN2  |  GN1  |  GN0  | Rango de lectura recomendado | Ganancia LSB/Gauss  |  Resolución digital mG/LSB | Rango de salida |
-|--------|-------|-------|------------------------------|---------------------|----------------------------|----------------|
+|--------|-------|-------|------------------------------|---------------------|----------------------------|-----------------|
 
 |  0     |    0  |   0   | +- 0.88 Ga                   | 1370                | 0.73                       | -2048 - 2047    |
 
@@ -82,3 +82,6 @@ El resto de valores no se documentan porque no son necesarios. El valor por defe
 de las lecturas, así que nos interesaría pasar al rango de resolución digital de 0.73 mG/LSB
 
 Para hacer esto habría que escribir un 0 en el registro B.
+
+## Páginas web de interés:
+http://www.magnetic-declination.com/
