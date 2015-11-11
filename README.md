@@ -74,7 +74,9 @@ tres bits más significativos controlan este parámetro. Los valores posibles so
 |--------|-------|-------|------------------------------|---------------------|----------------------------|----------------|
 
 |  0     |    0  |   0   | +- 0.88 Ga                   | 1370                | 0.73                       | -2048 - 2047    |
+
 |  0     |    0  |   1   | +- 1.33 Ga                   | 1090 (Val por def)  | 0.92                       | -2048 - 2047    |
+
 
 El resto de valores no se documentan porque no son necesarios. El valor por defecto reduciría la resolución
 de las lecturas, así que nos interesaría pasar al rango de resolución digital de 0.73 mG/LSB
