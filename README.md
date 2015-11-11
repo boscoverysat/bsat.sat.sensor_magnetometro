@@ -81,5 +81,18 @@ de las lecturas, así que nos interesaría pasar al rango de resolución digital
 
 Para hacer esto habría que escribir un 0 en el registro B.
 
+## Modos del magnetómetro.
+La mayoría de sensores que hemos probado utilizan un enfoque de medida contínua,
+esto es, están tomando valores contínuamente y cuando lees, lo que obtienes son
+los últimos valores adquiridos.
+Sin embargo, este sensor permite hacer lecturas simples. Las lecturas simples,
+se producen justo a continuación de la configuración del registro en este modo y
+acto seguido ponen el chip en modo reposo, con lo cual el ahorro energético es mayor.
+
+Este va a ser el enfoque que sigamos en el modelo de cubesat.
+
+Para poder poner el sensor en esta configuración hay que escribir en el registro
+de modo el valor hexadecimal 0x01.
+
 ## Páginas web de interés:
 http://www.magnetic-declination.com/
