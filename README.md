@@ -81,6 +81,22 @@ de las lecturas, así que nos interesaría pasar al rango de resolución digital
 
 Para hacer esto habría que escribir un 0 en el registro B.
 
+Hay que tener muy en cuenta que el orden de los registros de salida no es el que
+uno esperaría, ya que se almacena el registro para el eje X, a continuación el
+registro para el eje Z y en último lugar el registro para el eje Y.
+
+El valor almacenado en cada registro se guarda en complemento A-2 y hay que
+multiplicarlo, en la configuración que hemos seleccionado, por 0.73 mG
+
+El resultado que obtenemos estará en el rango de los miliGauss, para obtener los
+datos en unidades del sistema internacional tendremos que aplicar el siguiente
+factor de conversión.
+
+0.73mG * (1G/1000mG) * (1T/10000G)
+Estas operaciones las dejaremos para la estación de tierra, dado que no tiene
+sentido hacer estos cálculos a bordo.
+El enlace de radio transportará sólo los datos crudos de cada eje.
+
 ## Modos del magnetómetro.
 La mayoría de sensores que hemos probado utilizan un enfoque de medida contínua,
 esto es, están tomando valores contínuamente y cuando lees, lo que obtienes son

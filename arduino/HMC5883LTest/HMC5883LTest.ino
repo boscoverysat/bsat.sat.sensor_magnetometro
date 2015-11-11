@@ -19,13 +19,17 @@
 #include <Wire.h>
 #include "hmc5883l.h"
 
-float magX, magY, magZ;
+int magX, magY, magZ;
+float outX, outY, outZ;
 unsigned int milsec = 0;
 
 void setup() {
-  magX = 0.0;
-  magY = 0.0;
-  magZ = 0.0;
+  magX = 0;
+  magY = 0;
+  magZ = 0;
+  outX = 0.0;
+  outY = 0.0;
+  outZ = 0.0;
   // put your setup code here, to run once:
   Serial.begin(9600);
   Serial.println("Inicializando bus I2C");
@@ -42,6 +46,9 @@ void loop() {
   
 
   hmc5883l_singleread();
+  outX = magX * 0.73 / 1000 / 10000;
+  outY = magY * 0.73 / 1000 / 10000;
+  outZ = magZ * 0.73 / 1000 / 10000;
   Serial.print(milsec);
   Serial.print("ms ;");
   Serial.print(magX * 0.73);
@@ -50,6 +57,17 @@ void loop() {
   Serial.print("mg ;");
   Serial.print(magZ * 0.73);
   Serial.println("mg");
+  
+  Serial.print("\t X = ");
+  Serial.print(outX);
+  Serial.println("T");
+  Serial.print("\t Y = ");
+  Serial.print(outY);
+  Serial.println("T");
+  
+  Serial.print("\t Z = ");
+  Serial.print(outZ);
+  Serial.println("T");
   
   delay(500);
 }
@@ -106,4 +124,5 @@ void hmc5883l_singleread() {
   magX = Wire.read() <<8| Wire.read();
   magZ = Wire.read() <<8| Wire.read();
   magY = Wire.read() <<8| Wire.read();
+
 }
